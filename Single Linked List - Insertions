@@ -21,7 +21,6 @@ class Node{
     Node head,tail;
     public void insert(int data){
         Node newNode=new Node(data);
-        //newNode.next=head;
         if(head==null){
             head=newNode;
             tail=newNode;
@@ -32,8 +31,14 @@ class Node{
         }
     }
     public void insertatbegin(int data){
+          if(head==null){
+            head=newNode;
+            tail=newNode;
+        }
+    else{
         Node newNode=new Node(data);
         head=newNode;
+        }
     }
     public void insertatspec(int pos,int data){
         Node newNode=new Node(data);
